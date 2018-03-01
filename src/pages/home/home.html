@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Please Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="loginForm" novalidate>
+    <ion-item>
+      <ion-label stacked>Username:</ion-label>
+      <ion-input formControlName="username" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="">
+      <p>Please input a valid Email</p>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password:</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+  </form>
+
+  <div>
+    <button ion-button type="submit">Login</button>
+  </div>
+
+  <br>
+  
+  <p>Don't have an account?<button ion-button clear (click)="goToRegister()">Register!</button></p>
+  
+</ion-content>
